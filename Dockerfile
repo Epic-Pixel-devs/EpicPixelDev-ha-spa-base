@@ -11,29 +11,21 @@ COPY ./package* ./
 RUN npm install
 
 # copy all directories
-COPY . ./
+COPY ./public ./public
+COPY ./src ./src
 
 # create build project
 RUN npm run build
 
 # install ngnix
-FROM nginx:1.23.1 as nginx
+FROM nginx:stable-alpine3.17 as nginx
 
-# export port 80
-EXPOSE 80
-
-# use user root
-USER root
-
-# add on group on directory
-RUN chown -R nginx:nginx /app
-
-# change permission
-RUN chgrp -R $(id -gn nginx) /etc/nginx && chmod -R 777 /etc/nginx
+EXPOSE 9080
 
 # config nginx
 COPY ./.ci/conf.d/spa-base.conf /etc/nginx/conf.d/default.conf
 COPY ./.ci/nginx.conf /etc/nginx/nginx.conf
 
 # from container build copy all files and share pulic nginx
-COPY --from=BUILD /app/build/ /usr/share/nginx/html
+COPY --from=base /app/build/ /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
