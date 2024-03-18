@@ -11,13 +11,14 @@ COPY ./package* ./
 RUN npm install
 
 # copy all directories
-COPY . ./
+COPY ./public ./public
+COPY ./src ./src
 
 # create build project
 RUN npm run build
 
 # install ngnix
-FROM nginx:1.21 as nginx
+FROM nginx:stable-alpine3.17 as nginx
 
 # export port 80
 EXPOSE 80
@@ -37,3 +38,4 @@ COPY ./.ci/nginx.conf /etc/nginx/nginx.conf
 
 # from container build copy all files and share pulic nginx
 COPY --from=base /app/build/ /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
