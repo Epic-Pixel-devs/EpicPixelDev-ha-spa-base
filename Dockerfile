@@ -18,19 +18,7 @@ COPY ./src ./src
 RUN npm run build
 
 # install ngnix
-FROM nginx:stable-alpine3.17 as nginx
-
-# export port 80
-EXPOSE 80
-
-# use user root
-USER root
-
-# add on group on directory
-# RUN chown -R nginx:nginx ./app
-
-# change permission
-# RUN chgrp -R $(id -gn nginx) /etc/nginx && chmod -R 777 /etc/nginx
+FROM nginx:1.23.3 as nginx
 
 # config nginx
 COPY ./.ci/conf.d/spa-base.conf /etc/nginx/conf.d/default.conf
