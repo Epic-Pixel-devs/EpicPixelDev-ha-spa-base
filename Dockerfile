@@ -26,14 +26,14 @@ EXPOSE 80
 USER root
 
 # add on group on directory
-RUN chown -R nginx:nginx /app
+# RUN chown -R nginx:nginx ./app
 
 # change permission
-RUN chgrp -R $(id -gn nginx) /etc/nginx && chmod -R 777 /etc/nginx
+# RUN chgrp -R $(id -gn nginx) /etc/nginx && chmod -R 777 /etc/nginx
 
 # config nginx
 COPY ./.ci/conf.d/spa-base.conf /etc/nginx/conf.d/default.conf
 COPY ./.ci/nginx.conf /etc/nginx/nginx.conf
 
 # from container build copy all files and share pulic nginx
-COPY --from=BUILD /app/build/ /usr/share/nginx/html
+COPY --from=base /app/build/ /usr/share/nginx/html
