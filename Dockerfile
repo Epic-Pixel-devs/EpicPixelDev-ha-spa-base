@@ -20,6 +20,8 @@ RUN npm run build
 # install ngnix
 FROM nginx:stable-alpine3.17 as nginx
 
+EXPOSE 9080
+
 # config nginx
 COPY ./.ci/conf.d/spa-base.conf /etc/nginx/conf.d/default.conf
 COPY ./.ci/nginx.conf /etc/nginx/nginx.conf
