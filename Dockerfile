@@ -17,7 +17,7 @@ COPY . ./
 RUN npm run build
 
 # install ngnix
-FROM nginx:1.23.1 as nginx
+FROM nginx:1.21 as nginx
 
 # export port 80
 EXPOSE 80
