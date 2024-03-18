@@ -18,7 +18,7 @@ COPY ./src ./src
 RUN npm run build
 
 # install ngnix
-FROM nginx:1.23.3 as nginx
+FROM nginx:stable-alpine3.17 as nginx
 
 # config nginx
 COPY ./.ci/conf.d/spa-base.conf /etc/nginx/conf.d/default.conf
