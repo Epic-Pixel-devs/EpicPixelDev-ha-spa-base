@@ -15,7 +15,7 @@ const Index = () => {
                     <a href="/">
                         <Image src={Logo} style={{ width: '100px', height: '100px' }} alt='Herdeiros da Aurora' className='logo img-fluid' />
                     </a>
-                    <Button className='btnIndex'>Download</Button>
+                    <Button className='btnIndex' onClick={() => navigate('/download')}>Download</Button>
                 </nav>
             </Container>
             <Container className='d-flex justify-content-center fex-column'>
