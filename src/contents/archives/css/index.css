@@ -6,7 +6,7 @@
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 86, 19, 0.5858718487394958) 50%, rgba(49, 121, 9, 0.21332282913165268) 100%), url('../imgs/backgoundSectionHome.png');
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
 }
 
@@ -95,4 +95,20 @@ nav {
 
     letter-spacing: 2px;
 
+}
+
+.decoration {
+    max-width: 140px;
+    position: absolute;
+
+    opacity: 0.5;
+
+}
+
+.galho1 {
+    transform: translateY(-13rem) translateX(-2rem);
+}
+
+.galho2 {
+    transform: translateY(13rem) translateX(34rem) rotateX(180deg) rotateY(180deg);
 }

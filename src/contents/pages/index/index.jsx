@@ -4,6 +4,7 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import '../../archives/css/index.css'
 import SignUpIcon from '../../archives/imgs/signupIcon.png'
 import LogInIcon from '../../archives/imgs/loginIcon.png'
+import GalhoDecoratio from '../../archives/imgs/galhosDecorationImage.png'
 import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
             </Container>
             <Container className='d-flex justify-content-center fex-column'>
                 <Container className='d-flex justify-content-center flex-column mainContainer '>
+                    <Image src={GalhoDecoratio} fluid className='decoration galho1' />
                     <h1>Herdeiros da Aurora</h1>
                     <p>
                         Em um reino distante chamado Lumina, a paz e a prosperidade reinaram por séculos sob a luz da Aurora Eterna, um artefato mágico de imenso poder. No entanto, a Aurora Eterna desapareceu misteriosamente, levando o reino à beira do caos.
@@ -35,6 +37,7 @@ const Index = () => {
 
                         Ao longo do caminho, eles encontrarão aliados e inimigos, experimentarão triunfos e tragédias, e descobrirão não apenas os segredos do reino, mas também os deles próprios.
                     </p>
+                    <Image src={GalhoDecoratio} fluid className='decoration galho2' />
                     <Container>
                         <Row className='d-flex gap-5'>
                             <Col className='d-flex justfy-content-center'>
