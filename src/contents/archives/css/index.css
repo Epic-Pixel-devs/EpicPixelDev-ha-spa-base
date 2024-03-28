@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Breathe Fire III';
+    src: url('../font/Breathe\ Fire\ III.otf') format('truetype');
+}
+
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 86, 19, 0.5858718487394958) 50%, rgba(49, 121, 9, 0.21332282913165268) 100%), url('../imgs/backgoundSectionHome.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+* {
+    font-family: 'Breathe Fire III';
+}
+
+.logo {}
+
+nav {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btnIndex {
+    transition: 0.5s;
+    height: 50px;
+    transform: translateY(25px);
+    background-color: #a5a5a55e;
+    border: none;
+    letter-spacing: 2px;
+}
+
+.btnIndex:hover {
+    transition: 0.5s;
+    height: 50px;
+    transform: translateY(25px);
+    background-color: #6161615e;
+    border: none;
+    letter-spacing: 2px;
+}
+
+.btnIndex:focus {
+    transition: 0.5s;
+    height: 50px;
+    transform: translateY(25px);
+    background-color: #f7f7f75e;
+    color: #252121;
+    border: none;
+    letter-spacing: 2px;
+}
+
+.mainContainer {
+    background-color: #252121;
+    color: white;
+    padding: 30px;
+    max-width: 700px;
+    border-radius: 20px;
+    -webkit-box-shadow: -37px 11px 72px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -37px 11px 72px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: -37px 11px 72px -3px rgba(0, 0, 0, 0.75);
+}
+
+.mainContainer h1 {
+    text-align: center;
+    padding: 20px;
+
+}
+
+.mainContainer p {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.mainContainerBtn {
+    transition: 0.3s;
+    background-color: #8B4513;
+    letter-spacing: 2px;
+    border: none;
+
+}
+
+.mainContainerBtn:hover {
+    transition: 0.5s;
+    background-color: #935F3A;
+    color: #D1F88E;
+
+    letter-spacing: 2px;
+
+}
+
+.mainContainerBtn:focus {
+    transition: 0.5s;
+    background-color: #556B2F;
+    color: #E0DDDC;
+
+    letter-spacing: 2px;
+
+}
+
+.decoration {
+    max-width: 140px;
+    position: absolute;
+
+    opacity: 0.5;
+
+}
+
+.galho1 {
+    transform: translateY(-13rem) translateX(-2rem);
+}
+
+.galho2 {
+    transform: translateY(13rem) translateX(34rem) rotateX(180deg) rotateY(180deg);
+}
