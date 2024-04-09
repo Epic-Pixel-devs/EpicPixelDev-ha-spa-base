@@ -6,19 +6,13 @@ import SignUpIcon from '../../archives/imgs/signupIcon.png'
 import LogInIcon from '../../archives/imgs/loginIcon.png'
 import GalhoDecoratio from '../../archives/imgs/galhosDecorationImage.png'
 import { useNavigate } from 'react-router-dom';
+import HeaderNav from '../../components/HeaderNav';
 
 const Index = () => {
     const navigate = useNavigate();
     return (
         <>
-            <Container className='d-flex justify-content-center ' >
-                <nav className='d-flex'>
-                    <a href="/">
-                        <Image src={Logo} style={{ width: '100px', height: '100px' }} alt='Herdeiros da Aurora' className='logo img-fluid' />
-                    </a>
-                    <Button className='btnIndex' onClick={() => navigate('/download')}>Download</Button>
-                </nav>
-            </Container>
+            <HeaderNav />
             <Container className='d-flex justify-content-center fex-column'>
                 <Container className='d-flex justify-content-center flex-column mainContainer '>
                     <Image src={GalhoDecoratio} fluid className='decoration galho1' />
